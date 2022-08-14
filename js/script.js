@@ -32,6 +32,12 @@ const getResult = (cityName) => {
     .then(displayResult)
 }
 
+setInterval(() => {
+  var tarih = new Date()
+  var date = document.querySelector('.saat')
+  date.innerHTML = tarih.toUTCString()
+},1000);
+
 const displayResult = (result) => {
 
  
