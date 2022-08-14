@@ -6,6 +6,11 @@ const setQuery = (e) => {
 }
 
 const getResult = (cityName) => {
+
+ if (cityName == 'istanbul') {
+  document.body.style.backgroundImage = "url('ist-bg.jpg')"
+ }
+
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
 
   fetch(query)
@@ -16,6 +21,9 @@ const getResult = (cityName) => {
 }
 
 const displayResult = (result) => {
+
+ 
+
   let city = document.querySelector('.city')
   city.innerHTML = `${result.name}, ${result.sys.country}`
 
