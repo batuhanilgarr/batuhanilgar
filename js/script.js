@@ -7,27 +7,15 @@ const setQuery = (e) => {
 
 const getResult = (cityName) => {
 
- if (
-   cityName == 'istanbul' ||
-   cityName == 'Istanbul' ||
-   cityName == 'İstanbul' ||
-   cityName == 'İSTANBUL' ||
-   cityName == 'ISTANBUL'
+ if (cityName == 'istanbul' || cityName == 'Istanbul' || cityName == 'İstanbul' || cityName == 'İSTANBUL' || cityName == 'ISTANBUL'
  ) {
    document.body.style.backgroundImage = "url('images/ist-bg.jpg')"
- } else if (
-   cityName == 'elbistan' ||
-   cityName == 'Elbistan' ||
-   cityName == 'ELBİSTAN'
- ) {
+ } 
+ else if (cityName == 'elbistan' || cityName == 'Elbistan' || cityName == 'ELBİSTAN') {
    document.body.style.backgroundImage = "url('images/elb.jpg')"
- }else if (
-  cityName == 'ankara' ||
-  cityName == 'Ankara' ||
-  cityName == 'ANKARA'
- ){
-  document.body.style.backgroundImage = "url('images/ankara.jpg')"
-}
+ }
+ else if (cityName == 'ankara' || cityName == 'Ankara' || cityName == 'ANKARA') {
+   document.body.style.backgroundImage = "url('images/ankara.jpg')"
  }
 
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
