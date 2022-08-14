@@ -7,10 +7,20 @@ const setQuery = (e) => {
 
 const getResult = (cityName) => {
 
- if (cityName == 'istanbul') {
-  document.body.style.backgroundImage = "url('images/ist-bg.jpg')"
- }else if (cityName == 'elbistan'){
-  document.body.style.backgroundImage = "url('images/elb.jpg')"
+ if (
+   cityName == 'istanbul' ||
+   cityName == 'Istanbul' ||
+   cityName == 'İstanbul' ||
+   cityName == 'İSTANBUL' ||
+   cityName == 'ISTANBUL'
+ ) {
+   document.body.style.backgroundImage = "url('images/ist-bg.jpg')"
+ } else if (
+   cityName == 'elbistan' ||
+   cityName == 'Elbistan' ||
+   cityName == 'ELBİSTAN'
+ ) {
+   document.body.style.backgroundImage = "url('images/elb.jpg')"
  }
 
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
