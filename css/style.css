@@ -28,7 +28,7 @@ body {
 }
 
 .header h1 {
-  font-size: 70px;
+  font-size: 50px;
   color: #fbb034;
   text-shadow: 1px 3px rga(0, 0, 0, 0.9);
 }
@@ -36,7 +36,6 @@ body {
 .header input {
   width: 100%;
   padding: 10px;
-  padding-top: 50px;
   background: transparent;
   border: 0;
   outline: 0;
@@ -76,7 +75,6 @@ body {
   align-items: right;
   text-align: right;
 }
-
 
 .disable {
   -webkit-touch-callout: none;
