@@ -21,6 +21,13 @@ const getResult = (cityName) => {
    cityName == 'ELBİSTAN'
  ) {
    document.body.style.backgroundImage = "url('images/elb.jpg')"
+ }else if (
+  cityName == 'ankara' ||
+  cityName == 'Ankara' ||
+  cityName == 'ANKARA'
+ ){
+  document.body.style.backgroundImage = "url('images/ankara.jpg')"
+}
  }
 
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
