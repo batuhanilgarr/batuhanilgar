@@ -87,10 +87,14 @@ body {
 }
 
 
+.mapapi{
+  visibility: hidden;
+}
 
 
-#harita {
+
+/* #harita {
   width: 500px;
   height: 250px;
   border: none;
-}
+} */

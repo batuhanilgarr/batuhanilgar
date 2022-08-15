@@ -44,16 +44,22 @@ const getResult = (cityName) => {
 // },1000);
 
 const displayResult = (result) => {
+
+  document.querySelector('.mapapi').style.visibility = 'visible'
+
       let lat = document.querySelector('.lat')
       lat.innerHTML = `Lat : ${result.coord.lat}`
 
       let lon = document.querySelector('.lon')
       lon.innerHTML = `Lon : ${result.coord.lon}`
-    var harita = new google.maps.Map(document.getElementById('harita'), {
-      center: { lat: result.coord.lat, lng: result.coord.lon },
-      zoom: 10,
-      clickableIcons: true,
-    })
+
+    // var harita = new google.maps.Map(document.getElementById('harita'), {
+    //   center: { lat: result.coord.lat, lng: result.coord.lon },
+    //   zoom: 10,
+    //   clickableIcons: true,
+    // })
+
+
   let city = document.querySelector('.city')
   city.innerHTML = `${result.name}, ${result.sys.country}`
 
