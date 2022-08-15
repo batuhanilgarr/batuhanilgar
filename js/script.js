@@ -6,17 +6,27 @@ const setQuery = (e) => {
 }
 
 const getResult = (cityName) => {
-
- if (cityName == 'istanbul' || cityName == 'Istanbul' || cityName == 'İstanbul' || cityName == 'İSTANBUL' || cityName == 'ISTANBUL'
- ) {
-   document.body.style.backgroundImage = "url('images/ist-bg.jpg')"
- } 
- else if (cityName == 'elbistan' || cityName == 'Elbistan' || cityName == 'ELBİSTAN') {
-   document.body.style.backgroundImage = "url('images/elb.jpg')"
- }
- else if (cityName == 'ankara' || cityName == 'Ankara' || cityName == 'ANKARA') {
-   document.body.style.backgroundImage = "url('images/ankara.jpg')"
- }
+  if (
+    cityName == 'istanbul' ||
+    cityName == 'Istanbul' ||
+    cityName == 'İstanbul' ||
+    cityName == 'İSTANBUL' ||
+    cityName == 'ISTANBUL'
+  ) {
+    document.body.style.backgroundImage = "url('images/ist-bg.jpg')"
+  } else if (
+    cityName == 'elbistan' ||
+    cityName == 'Elbistan' ||
+    cityName == 'ELBİSTAN'
+  ) {
+    document.body.style.backgroundImage = "url('images/elb.jpg')"
+  } else if (
+    cityName == 'ankara' ||
+    cityName == 'Ankara' ||
+    cityName == 'ANKARA'
+  ) {
+    document.body.style.backgroundImage = "url('images/ankara.jpg')"
+  }
 
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
 
@@ -27,16 +37,23 @@ const getResult = (cityName) => {
     .then(displayResult)
 }
 
-setInterval(() => {
-  var tarih = new Date()
-  var date = document.querySelector('.saat')
-  date.innerHTML = tarih.toUTCString()
-},1000);
+// setInterval(() => {
+//   var tarih = new Date()
+//   var date = document.querySelector('.saat')
+//   date.innerHTML = tarih.toUTCString()
+// },1000);
 
 const displayResult = (result) => {
+      let lat = document.querySelector('.lat')
+      lat.innerHTML = `Lat : ${result.coord.lat}`
 
- 
-
+      let lon = document.querySelector('.lon')
+      lon.innerHTML = `Lon : ${result.coord.lon}`
+    var harita = new google.maps.Map(document.getElementById('harita'), {
+      center: { lat: result.coord.lat, lng: result.coord.lon },
+      zoom: 10,
+      clickableIcons: true,
+    })
   let city = document.querySelector('.city')
   city.innerHTML = `${result.name}, ${result.sys.country}`
 
@@ -51,6 +68,8 @@ const displayResult = (result) => {
     result.main.temp_max
   )}°C`
 }
+
+function initMap() {}
 
 const searchBar = document.querySelector('#searchbar')
 searchBar.addEventListener('keypress', setQuery)

@@ -8,7 +8,8 @@
  <title>OpenWeather Api</title>
  <link rel="stylesheet" href="/css/style.css">
  <script src="https://kit.fontawesome.com/3751f55923.js" crossorigin="anonymous"></script>
-
+ <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFMDUsYXJ2rfuSf7ooQhKHTjfb8ylbMKA">
+ </script>
 </head>
 
 <body>
@@ -18,16 +19,22 @@
   <div class="header disable">
    <h1>Hava Durumu</h1>
    <input type="text" id="searchbar" placeholder="Şehir Giriniz...">
-   
+
   </div>
   <div class="content">
    <div class="city"></div>
    <div class="temp"></div>
    <div class="desc"></div>
    <div class="minmax"></div>
+   <div class="lat"></div>
+   <div class="lon"></div>
+   <div id="harita"></div>
+
   </div>
  </div>
- 
+
+
+
 
  <script src="/js/script.js"></script>
 </body>
