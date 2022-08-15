@@ -45,6 +45,8 @@ const getResult = (cityName) => {
 
 const displayResult = (result) => {
 
+  console.log(result)
+
   // document.querySelector('.mapapi').style.visibility = 'visible'
 
       let lat = document.querySelector('.lat')
