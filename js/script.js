@@ -65,7 +65,7 @@ const getResult = (cityName) => {
             window.open(data.results[i].links.download, '_blank')
           })
           var lastt = data.results[i].urls.raw
-          bodyElement.style.backgroundImage = 'url(l)'
+          bodyElement.style.backgroundImage = 'url(' + lastt + ')'
           console.log(lastt)
         }
       })
