@@ -98,3 +98,25 @@ body {
   max-height: 100%;
   border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img{
+  width: 380px;
+  height: 200px;
+  margin-top: 15px;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+}
